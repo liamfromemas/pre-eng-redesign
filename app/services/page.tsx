@@ -20,7 +20,7 @@ export default function ServicesPage() {
         subtitle="40+ years of institutional construction experience, from ground-up new builds to complex phased renovations in occupied facilities."
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white', paddingBottom: '4rem' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '4rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 gap-12">
             {services.map((service, i) => (
