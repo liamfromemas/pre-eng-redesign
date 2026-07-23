@@ -7,11 +7,11 @@ export function FeaturedProjects() {
   const featured = getFeaturedProjects();
 
   return (
-    <section className="section-py" style={{ backgroundColor: 'white' }}>
+    <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
       <div className="max-w-screen-xl mx-auto container-px">
         <ScrollReveal>
           <p className="section-label mb-4">Our Work</p>
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
             <h2
               className="display-lg"
               style={{ color: 'var(--color-navy-900)', maxWidth: '36rem' }}
@@ -36,7 +36,7 @@ export function FeaturedProjects() {
         </div>
 
         <ScrollReveal>
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <Link href="/projects" className="btn-outline-dark">
               View All 11 Projects →
             </Link>

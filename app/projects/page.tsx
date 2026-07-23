@@ -24,7 +24,7 @@ export default function ProjectsPage() {
 
       {/* Sector summary */}
       <div style={{ backgroundColor: 'var(--color-neutral-100)' }}>
-        <div className="max-w-screen-xl mx-auto container-px py-8">
+        <div className="max-w-screen-xl mx-auto container-px py-4">
           <div className="flex flex-wrap gap-6 items-center">
             <span
               className="text-xs font-semibold tracking-widest uppercase"
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projectsByValue.map((project, i) => (

@@ -26,7 +26,7 @@ export function ServicesOverview() {
   return (
     <section
       className="section-py"
-      style={{ backgroundColor: 'var(--color-neutral-100)' }}
+      style={{ backgroundColor: 'var(--color-neutral-100)', paddingTop: '3rem', paddingBottom: '3rem' }}
     >
       <div className="max-w-screen-xl mx-auto container-px">
         <ScrollReveal>

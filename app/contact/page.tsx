@@ -21,7 +21,7 @@ export default function ContactPage() {
         compact
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:items-start">
             {/* Contact Info */}
@@ -103,26 +103,6 @@ export default function ContactPage() {
                       </a>
                     </div>
                   </div>
-
-                  {/* Map embed */}
-                  <div>
-                    <p
-                      className="text-xs font-semibold uppercase tracking-widest mb-3"
-                      style={{ color: 'var(--color-charcoal-400)' }}
-                    >
-                      Location
-                    </p>
-                    <div style={{ position: 'relative', paddingBottom: '75%', height: 0, overflow: 'hidden' }}>
-                      <iframe
-                        title="Pre-Eng Contracting office location — 1 Applewood Crescent Unit 10, Concord, Ontario"
-                        src="https://maps.google.com/maps?q=1+Applewood+Crescent+Unit+10+Concord+ON+L4K+4K1&output=embed&z=15"
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
-                    </div>
-                  </div>
                 </div>
               </ScrollReveal>
             </aside>
@@ -135,6 +115,20 @@ export default function ContactPage() {
               </ScrollReveal>
             </div>
           </div>
+
+          {/* Full-width map */}
+          <ScrollReveal>
+            <div className="mt-12" style={{ position: 'relative', paddingBottom: '42.86%', overflow: 'hidden' }}>
+              <iframe
+                title="Pre-Eng Contracting office location — 1 Applewood Crescent Unit 10, Concord, Ontario"
+                src="https://maps.google.com/maps?q=1+Applewood+Crescent+Unit+10+Concord+ON+L4K+4K1&output=embed&z=15"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

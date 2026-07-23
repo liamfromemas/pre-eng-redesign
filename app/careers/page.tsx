@@ -18,12 +18,11 @@ export default function CareersPage() {
         eyebrow="Join Our Team"
         title="Careers at Pre-Eng"
         subtitle="Always committed, always a team approach."
-        compact
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-start">
             <ScrollReveal direction="left">
               <p className="section-label mb-4">Why Pre-Eng</p>
               <h2
@@ -56,48 +55,46 @@ export default function CareersPage() {
               </p>
             </ScrollReveal>
 
-            <ScrollReveal>
-              <div className="space-y-4">
-                {[
-                  {
-                    title: 'Real Project Responsibility',
-                    body: 'At Pre-Eng, you work on meaningful institutional projects from day one. Our team structure gives every member real accountability and real impact.',
-                  },
-                  {
-                    title: 'Experienced Team',
-                    body: 'Work alongside experienced construction professionals in a collaborative environment where knowledge is shared openly.',
-                  },
-                  {
-                    title: 'Diverse Project Types',
-                    body: 'From schools and libraries to police stations and recreation centres, no two projects are the same. Build a broad portfolio of institutional experience.',
-                  },
-                  {
-                    title: 'Hands-On Culture',
-                    body: 'The principals of the firm are actively involved on every project. Decisions happen close to the work, not behind layers of management.',
-                  },
-                ].map((item, i) => (
-                  <ScrollReveal key={item.title} delay={i * 60}>
-                    <div
-                      className="p-6 border-l-4"
-                      style={{
-                        borderColor: 'var(--color-navy-900)',
-                        backgroundColor: 'var(--color-neutral-100)',
-                      }}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  title: 'Real Project Responsibility',
+                  body: 'At Pre-Eng, you work on meaningful institutional projects from day one. Our team structure gives every member real accountability and real impact.',
+                },
+                {
+                  title: 'Experienced Team',
+                  body: 'Work alongside experienced construction professionals in a collaborative environment where knowledge is shared openly.',
+                },
+                {
+                  title: 'Diverse Project Types',
+                  body: 'From schools and libraries to police stations and recreation centres, no two projects are the same. Build a broad portfolio of institutional experience.',
+                },
+                {
+                  title: 'Hands-On Culture',
+                  body: 'The principals of the firm are actively involved on every project. Decisions happen close to the work, not behind layers of management.',
+                },
+              ].map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 60} className="h-full">
+                  <div
+                    className="p-6 border-l-4 h-full"
+                    style={{
+                      borderColor: 'var(--color-navy-900)',
+                      backgroundColor: 'var(--color-neutral-100)',
+                    }}
+                  >
+                    <h3
+                      className="font-bold mb-2"
+                      style={{ color: 'var(--color-navy-900)' }}
                     >
-                      <h3
-                        className="font-bold mb-2"
-                        style={{ color: 'var(--color-navy-900)' }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed" style={{ color: 'var(--color-charcoal-600)' }}>
-                        {item.body}
-                      </p>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </ScrollReveal>
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: 'var(--color-charcoal-600)' }}>
+                      {item.body}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -105,7 +102,7 @@ export default function CareersPage() {
       {/* How to apply */}
       <section
         className="section-py"
-        style={{ backgroundColor: 'var(--color-navy-900)' }}
+        style={{ backgroundColor: 'var(--color-navy-900)', paddingTop: '3rem', paddingBottom: '3rem' }}
       >
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="max-w-2xl">

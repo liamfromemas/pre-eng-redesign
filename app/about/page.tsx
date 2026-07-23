@@ -28,7 +28,7 @@ export default function AboutPage() {
         subtitle="40+ years of institutional construction in Ontario, built on efficiency, integrity, and a genuine team approach."
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white', paddingBottom: '4rem' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal direction="left">
@@ -126,7 +126,7 @@ export default function AboutPage() {
       {/* History Timeline */}
       <section
         className="section-py"
-        style={{ backgroundColor: 'var(--color-neutral-100)', paddingTop: '4rem' }}
+        style={{ backgroundColor: 'var(--color-neutral-100)', paddingTop: '3rem', paddingBottom: '3rem' }}
       >
         <div className="max-w-screen-xl mx-auto container-px">
           <ScrollReveal>
@@ -183,7 +183,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="section-py" style={{ backgroundColor: 'var(--color-navy-900)' }}>
+      <section className="section-py" style={{ backgroundColor: 'var(--color-navy-900)', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <ScrollReveal>
             <p className="section-label mb-4">Our Values</p>
@@ -193,9 +193,9 @@ export default function AboutPage() {
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {company.values.map((value, i) => (
-              <ScrollReveal key={value.title} delay={i * 60}>
+              <ScrollReveal key={value.title} delay={i * 60} className="h-full">
                 <div
-                  className="p-6 border"
+                  className="p-6 border h-full"
                   style={{
                     borderColor: 'rgba(255,255,255,0.1)',
                     backgroundColor: 'rgba(255,255,255,0.04)',
