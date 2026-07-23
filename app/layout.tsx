@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
+import { FooterController } from '@/components/layout/FooterController';
 import { SmoothScrollProvider } from '@/components/layout/SmoothScrollProvider';
 import { company } from '@/content/company';
 import { organizationSchema } from '@/lib/jsonld';
@@ -72,7 +72,7 @@ export default function RootLayout({
           <main id="main-content" tabIndex={-1}>
             {children}
           </main>
-          <SiteFooter />
+          <FooterController />
         </SmoothScrollProvider>
       </body>
     </html>

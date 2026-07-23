@@ -23,7 +23,7 @@ export default function CareersPage() {
 
       <section className="section-py" style={{ backgroundColor: 'white' }}>
         <div className="max-w-screen-xl mx-auto container-px">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center">
             <ScrollReveal direction="left">
               <p className="section-label mb-4">Why Pre-Eng</p>
               <h2
@@ -128,31 +128,12 @@ export default function CareersPage() {
               >
                 Send Resume to {company.contact.email}
               </a>
+              <p className="mt-8 text-sm text-white/50 leading-relaxed max-w-lg">
+                <strong className="text-white/70 font-semibold">No formal job board.</strong>{' '}
+                We hire based on fit and project needs — speculative applications are always welcome.
+              </p>
             </ScrollReveal>
           </div>
-        </div>
-      </section>
-
-      {/* No current openings note */}
-      <section className="py-12" style={{ backgroundColor: 'var(--color-neutral-100)' }}>
-        <div className="max-w-screen-xl mx-auto container-px">
-          <ScrollReveal>
-            <p className="text-sm" style={{ color: 'var(--color-charcoal-500)' }}>
-              <strong style={{ color: 'var(--color-charcoal-700)' }}>
-                Current openings:
-              </strong>{' '}
-              Pre-Eng does not maintain a formal job board. We hire based on fit and
-              project needs. Speculative applications are always welcome at{' '}
-              <a
-                href={company.contact.emailHref}
-                className="underline"
-                style={{ color: 'var(--color-navy-900)' }}
-              >
-                {company.contact.email}
-              </a>
-              .
-            </p>
-          </ScrollReveal>
         </div>
       </section>
     </>

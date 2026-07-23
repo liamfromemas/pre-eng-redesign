@@ -20,7 +20,7 @@ export default function ServicesPage() {
         subtitle="40+ years of institutional construction experience, from ground-up new builds to complex phased renovations in occupied facilities."
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingBottom: '4rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 gap-12">
             {services.map((service, i) => (
@@ -86,25 +86,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-py" style={{ backgroundColor: 'var(--color-navy-900)', paddingBottom: 0 }}>
-        <div className="max-w-screen-xl mx-auto container-px text-center">
-          <ScrollReveal>
-            <p className="section-label mb-4">Start a Conversation</p>
-            <h2 className="display-md text-white mb-6">
-              Tell us about your project.
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
-                Contact Us
-              </Link>
-              <Link href="/projects" className="btn-outline">
-                See Our Portfolio
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
     </>
   );
 }

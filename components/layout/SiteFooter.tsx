@@ -28,7 +28,7 @@ const footerNav = [
   },
 ];
 
-export function SiteFooter() {
+export function SiteFooter({ showCTA = true }: { showCTA?: boolean }) {
   const year = new Date().getFullYear();
 
   return (
@@ -37,9 +37,10 @@ export function SiteFooter() {
       style={{ backgroundColor: 'var(--color-charcoal-900)' }}
       className="text-white"
     >
-      {/* CTA band */}
-      <div style={{ backgroundColor: 'var(--color-navy-900)' }} className="py-16">
-        <div className="max-w-screen-xl mx-auto container-px flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      {/* CTA band — border-t provides visual separation even when preceding section shares navy bg */}
+      {showCTA && (
+      <div style={{ backgroundColor: 'var(--color-navy-900)' }} className="py-16 border-t border-white/10">
+        <div className="max-w-screen-xl mx-auto container-px flex flex-col md:flex-row items-start justify-between gap-8">
           <div>
             <p className="section-label mb-3">Ready to Build?</p>
             <h2 className="display-md text-white">
@@ -56,6 +57,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Footer body */}
       <div className="max-w-screen-xl mx-auto container-px py-16">

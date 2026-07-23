@@ -40,7 +40,7 @@ export function TendersGate() {
   /* ── GATE STATE: Terms & Conditions ── */
   if (!agreed) {
     return (
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div
             className="max-w-3xl mx-auto border-l-4 p-8"
@@ -86,7 +86,7 @@ export function TendersGate() {
 
   /* ── UNLOCKED STATE: Active Tender Listings ── */
   return (
-    <section className="section-py" style={{ backgroundColor: 'white' }}>
+    <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem' }}>
       <div className="max-w-screen-xl mx-auto container-px">
         {active.length > 0 ? (
           <>

@@ -23,7 +23,7 @@ export default function ContactPage() {
 
       <section className="section-py" style={{ backgroundColor: 'white' }}>
         <div className="max-w-screen-xl mx-auto container-px">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:items-start">
             {/* Contact Info */}
             <aside className="lg:col-span-2">
               <ScrollReveal direction="left">

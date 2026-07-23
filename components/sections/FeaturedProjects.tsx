@@ -11,7 +11,7 @@ export function FeaturedProjects() {
       <div className="max-w-screen-xl mx-auto container-px">
         <ScrollReveal>
           <p className="section-label mb-4">Our Work</p>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12">
             <h2
               className="display-lg"
               style={{ color: 'var(--color-navy-900)', maxWidth: '36rem' }}

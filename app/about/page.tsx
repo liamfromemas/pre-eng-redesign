@@ -28,7 +28,7 @@ export default function AboutPage() {
         subtitle="40+ years of institutional construction in Ontario, built on efficiency, integrity, and a genuine team approach."
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingBottom: '4rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal direction="left">
@@ -126,13 +126,13 @@ export default function AboutPage() {
       {/* History Timeline */}
       <section
         className="section-py"
-        style={{ backgroundColor: 'var(--color-neutral-100)' }}
+        style={{ backgroundColor: 'var(--color-neutral-100)', paddingTop: '4rem' }}
       >
         <div className="max-w-screen-xl mx-auto container-px">
           <ScrollReveal>
             <p className="section-label mb-4">Our History</p>
             <h2
-              className="display-md mb-12"
+              className="display-md mb-8"
               style={{ color: 'var(--color-navy-900)', maxWidth: '36rem' }}
             >
               A track record built over four decades.
@@ -187,11 +187,11 @@ export default function AboutPage() {
         <div className="max-w-screen-xl mx-auto container-px">
           <ScrollReveal>
             <p className="section-label mb-4">Our Values</p>
-            <h2 className="display-md text-white mb-12" style={{ maxWidth: '36rem' }}>
+            <h2 className="display-md text-white mb-8" style={{ maxWidth: '36rem' }}>
               The principles behind every project.
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {company.values.map((value, i) => (
               <ScrollReveal key={value.title} delay={i * 60}>
                 <div
@@ -215,33 +215,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
-        <div className="max-w-screen-xl mx-auto container-px text-center">
-          <ScrollReveal>
-            <p className="section-label mb-4">Ready to Build Together?</p>
-            <h2 className="display-md mb-6" style={{ color: 'var(--color-navy-900)' }}>
-              Let&apos;s talk about your project.
-            </h2>
-            <p
-              className="mb-8 max-w-xl mx-auto leading-relaxed"
-              style={{ color: 'var(--color-charcoal-600)' }}
-            >
-              Whether you&apos;re planning a new school, a government facility, or a
-              renovation to an occupied building, we&apos;d be glad to discuss how
-              Pre-Eng can help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
-                Contact Us
-              </Link>
-              <Link href="/projects" className="btn-outline-dark">
-                View Our Work
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
     </>
   );
 }

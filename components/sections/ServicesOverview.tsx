@@ -31,7 +31,7 @@ export function ServicesOverview() {
       <div className="max-w-screen-xl mx-auto container-px">
         <ScrollReveal>
           <p className="section-label mb-4">What We Do</p>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10">
             <h2 className="display-lg" style={{ color: 'var(--color-navy-900)', maxWidth: '36rem' }}>
               Specialized in institutional construction for 40 years.
             </h2>

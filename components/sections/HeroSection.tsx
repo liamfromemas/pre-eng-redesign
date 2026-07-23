@@ -106,9 +106,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator — hidden at mobile to avoid overlapping the stats grid */}
+      {/* Scroll indicator — sm→md only; hidden at lg+ where it would overlap the 4-col stats grid */}
       <div
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-50"
+        className="hidden sm:flex lg:hidden absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-50"
         aria-hidden
       >
         <span className="text-white text-xs tracking-widest uppercase">Scroll</span>

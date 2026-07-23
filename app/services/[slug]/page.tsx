@@ -52,7 +52,7 @@ export default async function ServicePage({
         subtitle={service.description}
       />
 
-      <section className="section-py" style={{ backgroundColor: 'white' }}>
+      <section className="section-py" style={{ backgroundColor: 'white', paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="max-w-screen-xl mx-auto container-px">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2">
@@ -153,7 +153,7 @@ export default async function ServicePage({
       {relatedProjects.length > 0 && (
         <section
           className="section-py"
-          style={{ backgroundColor: 'var(--color-neutral-100)' }}
+          style={{ backgroundColor: 'var(--color-neutral-100)', paddingTop: '3rem' }}
         >
           <div className="max-w-screen-xl mx-auto container-px">
             <ScrollReveal>

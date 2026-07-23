@@ -21,9 +21,9 @@ export function PageHero({
     <section
       className="relative flex items-end overflow-hidden"
       style={{
-        minHeight: compact ? '280px' : '420px',
+        minHeight: compact ? '360px' : '420px',
         paddingTop: '96px',
-        paddingBottom: compact ? '48px' : '72px',
+        paddingBottom: compact ? '64px' : '72px',
         backgroundColor: 'var(--color-navy-900)',
       }}
       aria-label={`${title} page hero`}

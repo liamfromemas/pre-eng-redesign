@@ -65,7 +65,7 @@ export default function ProjectsPage() {
 
           <ScrollReveal>
             <div
-              className="mt-16 p-8 border-l-4"
+              className="mt-10 p-8 border-l-4"
               style={{
                 backgroundColor: 'var(--color-neutral-100)',
                 borderColor: 'var(--color-navy-900)',
