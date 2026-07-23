@@ -38,7 +38,7 @@ export function SiteFooter({ showCTA = true }: { showCTA?: boolean }) {
       className="text-white"
     >
       {showCTA && (
-      <div style={{ backgroundColor: 'var(--color-navy-900)' }} className="py-16">
+      <div style={{ backgroundColor: 'var(--color-navy-cta)' }} className="py-16">
         <div className="max-w-screen-xl mx-auto container-px flex flex-col md:flex-row items-start justify-between gap-8">
           <div>
             <p className="section-label mb-3">Ready to Build?</p>
