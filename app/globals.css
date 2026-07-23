@@ -1,26 +1,371 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   PRE-ENG CONTRACTING — DESIGN SYSTEM
+   Brand colors extracted from existing site CSS
+   ============================================================ */
+
+@theme {
+  /* --- Brand Colors --- */
+  --color-navy-950: #061826;
+  --color-navy-900: #0c2d48;  /* Primary brand navy — #0C2D48 (highest freq brand color) */
+  --color-navy-800: #0f3a5e;
+  --color-navy-700: #144d7a;
+  --color-navy-600: #1a6196;
+
+  --color-red-brand: #d41d2b;  /* Brand accent red — #D41D2B */
+  --color-red-dark: #a81521;
+  --color-red-light: #e83340;
+
+  --color-charcoal-900: #1a1d22;
+  --color-charcoal-800: #31343c;
+  --color-charcoal-700: #41454d;
+  --color-charcoal-600: #51555b;
+  --color-charcoal-500: #666b73;
+  --color-charcoal-400: #888e98;
+  --color-charcoal-300: #b0b6be;
+
+  --color-neutral-200: #e3e3e3;
+  --color-neutral-100: #f4f5f5;
+  --color-neutral-50:  #fafafa;
+
+  /* --- Typography --- */
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale */
+  --text-display-2xl: 4.5rem;    /* 72px */
+  --text-display-xl:  3.75rem;   /* 60px */
+  --text-display-lg:  3rem;      /* 48px */
+  --text-display-md:  2.25rem;   /* 36px */
+  --text-display-sm:  1.875rem;  /* 30px */
+  --text-heading-xl:  1.5rem;    /* 24px */
+  --text-heading-lg:  1.25rem;   /* 20px */
+  --text-body-lg:     1.125rem;  /* 18px */
+  --text-body-md:     1rem;      /* 16px */
+  --text-body-sm:     0.875rem;  /* 14px */
+  --text-caption:     0.75rem;   /* 12px */
+
+  /* Line heights */
+  --leading-tighter: 1.1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* Letter spacing */
+  --tracking-tightest: -0.04em;
+  --tracking-tighter:  -0.02em;
+  --tracking-tight:    -0.01em;
+  --tracking-wide:      0.05em;
+  --tracking-wider:     0.1em;
+  --tracking-widest:    0.15em;
+
+  /* --- Spacing --- */
+  --spacing-section-sm:  4rem;   /* 64px  — mobile section padding */
+  --spacing-section-md:  6rem;   /* 96px  — tablet section padding */
+  --spacing-section-lg:  10rem;  /* 160px — desktop section padding */
+
+  /* --- Motion --- */
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms;
+  --duration-slower: 700ms;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* --- Radius --- */
+  --radius-sm:  0.25rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.75rem;
+  --radius-xl:  1rem;
+  --radius-2xl: 1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: var(--color-charcoal-800);
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  line-height: var(--leading-normal);
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   FOCUS STYLES — branded, WCAG AA compliant
+   ============================================================ */
+
+:focus-visible {
+  outline: 3px solid var(--color-red-brand);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+
+.display-2xl {
+  font-size: clamp(2.5rem, 6vw, var(--text-display-2xl));
+  font-weight: 700;
+  line-height: var(--leading-tighter);
+  letter-spacing: var(--tracking-tighter);
+}
+
+.display-xl {
+  font-size: clamp(2rem, 5vw, var(--text-display-xl));
+  font-weight: 700;
+  line-height: var(--leading-tighter);
+  letter-spacing: var(--tracking-tighter);
+}
+
+.display-lg {
+  font-size: clamp(1.75rem, 4vw, var(--text-display-lg));
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.display-md {
+  font-size: clamp(1.5rem, 3.5vw, var(--text-display-md));
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.section-label {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-red-brand);
+}
+
+/* ============================================================
+   SECTION SPACING
+   ============================================================ */
+
+.section-py {
+  padding-top: var(--spacing-section-sm);
+  padding-bottom: var(--spacing-section-sm);
+}
+
+@media (min-width: 768px) {
+  .section-py {
+    padding-top: var(--spacing-section-md);
+    padding-bottom: var(--spacing-section-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-py {
+    padding-top: var(--spacing-section-lg);
+    padding-bottom: var(--spacing-section-lg);
+  }
+}
+
+.container-px {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-px {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-px {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-px {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* ============================================================
+   BUTTON STYLES
+   ============================================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-red-brand);
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-body-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background-color var(--duration-normal) var(--ease-out-quart),
+              transform var(--duration-fast) var(--ease-out-quart);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-red-dark);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-body-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  text-decoration: none;
+  transition: border-color var(--duration-normal) var(--ease-out-quart),
+              background-color var(--duration-normal) var(--ease-out-quart);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: var(--color-navy-900);
+  font-weight: 600;
+  font-size: var(--text-body-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border: 2px solid var(--color-navy-900);
+  border-radius: 0;
+  text-decoration: none;
+  transition: background-color var(--duration-normal) var(--ease-out-quart),
+              color var(--duration-normal) var(--ease-out-quart);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-navy-900);
+  color: white;
+}
+
+/* ============================================================
+   IMAGE OVERLAYS
+   ============================================================ */
+
+.img-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 24, 38, 0.3) 0%,
+    rgba(6, 24, 38, 0.65) 100%
+  );
+}
+
+.img-overlay-left {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(6, 24, 38, 0.85) 0%,
+    rgba(6, 24, 38, 0.5) 50%,
+    rgba(6, 24, 38, 0.1) 100%
+  );
+}
+
+/* ============================================================
+   ANIMATIONS (respects prefers-reduced-motion)
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--duration-slow) var(--ease-out-quart) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--duration-slow) var(--ease-out-quart) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,8 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pre-Eng Contracting — Website
 
-## Getting Started
+Redesigned website for Pre-Eng Contracting Ltd., an institutional general contractor based in Concord, Ontario with 40+ years of experience.
 
-First, run the development server:
+Built with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Framer Motion, and Lenis smooth scroll.
+
+---
+
+## Setup
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Install dependencies
+```bash
+npm install
+```
+
+### Environment variables
+
+Create `.env.local` with:
+
+```bash
+CONTACT_EMAIL_TO=info@pre-eng.com
+RESEND_API_KEY=your_key_here
+```
+
+| Variable | Description | Required |
+|---|---|---|
+| `CONTACT_EMAIL_TO` | Email address that receives contact form submissions | Yes |
+| `RESEND_API_KEY` | Resend API key for transactional email (or replace with SendGrid/Postmark) | Yes for email to send |
+
+### Run in development
 
 ```bash
 npm run dev
