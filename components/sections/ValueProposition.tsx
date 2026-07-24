@@ -8,7 +8,7 @@ export function ValueProposition() {
       style={{ backgroundColor: 'var(--color-navy-900)', paddingTop: '3rem', paddingBottom: '3rem' }}
     >
       <div className="max-w-screen-xl mx-auto container-px">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: Copy */}
           <ScrollReveal direction="left">
             <p className="section-label mb-4">Why Pre-Eng</p>
